@@ -1,0 +1,13 @@
+Important Notes for your Flask Backend:
+
+For the JavaScript code above to work, your Flask backend needs to expose the following API endpoints:
+
+POST /api/items: To create a new record. (Expects JSON body, returns JSON of new record)
+
+GET /api/items: To read all records. (Returns JSON array of records)
+
+GET /api/items/<id>: To read a specific record by ID. (Returns JSON of the record)
+
+PUT /api/items/<id>: To update a specific record by ID. (Expects JSON body, returns JSON of updated record)
+
+DELETE /api/items/<id>: To delete a specific record by ID. (Returns 204 No Content or a simple success message)

@@ -1,0 +1,90 @@
+<nav class="navbar sticky-top navbar-expand-sm bg-white opacity-100 mt-1">
+
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img src="./static/assets/img/smallflower.png"></a>
+    <button class="navbar-toggler" 
+            type="button" 
+            data-bs-toggle="collapse" 
+            data-bs-target="#ctarget" 
+            aria-controls="ctarget" 
+            aria-expanded="false" 
+            aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"</span>
+    </button>
+    <div class="collapse navbar-collapse" id="ctarget">
+      
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/" id="homepage">home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/about" id="aboutpage">about</a>
+        </li>
+        
+<!--        <li class="nav-item dropdown">
+          <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            about
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/biography">biography</a></li>
+            <li><a class="dropdown-item" href="/faqs">faqs</a></li>
+          </ul>
+        </li>-->
+<!--        
+        <li class="nav-item dropdown">
+          <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            media
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#" >facebook</a></li>
+            <li><a class="dropdown-item" href="#">twitter</a></li>
+            <li><a class="dropdown-item" href="#">instagram</a></li>
+          </ul>
+        </li>
+-->
+        <li class="nav-item dropdown">
+          <a class="nav-link " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            books
+          </a>
+          {% include 'booksul.html' %} 
+        </li>
+<!--       
+        <li class="nav-item dropdown">
+          <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            words
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" onclick="displayAboutTopic('musings')">musings</a></li>
+            <li><a class="dropdown-item" onclick="displayAboutTopic('interview')">interview</a></li>
+            <li><a class="dropdown-item" onclick="displayAboutTopic('speeches')">speeches</a></li>
+          </ul>
+        </li>
+-->        
+        <li class="nav-item dropdown">
+          <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            poems
+          </a>
+          {% include 'poemsul.html' %} 
+        </li> 
+        
+       <li class="nav-item dropdown">
+          <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+             live poets society
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/lps/history">history</a></li>
+            <li><a class="dropdown-item" href="/lps/readings">readings</a></li>
+            <li><a class="dropdown-item" href="/lps/contact">contact</a></li>
+            <li><a class="dropdown-item" href="/lps/publications">publications</a></li>
+          </ul>
+        </li>
+         
+        
+        
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="contact">contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

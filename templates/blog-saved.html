@@ -1,0 +1,20 @@
+    {% extends "base.html" %}
+    {% block title %}my blog{% endblock%}
+    {%block header%}My Blog{% endblock%}
+ 
+    {% block content %}
+    <div class="row">
+        <!-- Centered Caption -->
+        <div class="sidenav">
+            {%for post in posts %}
+                    <div  onclick="getpost({{post.id}})" >{{ post.title| safe }}</div>
+             {%endfor%}
+        </div>
+    </div>
+        
+    <!-- Content -->    
+    <div class="row">
+        <div class="col-8 post-container offset-3"  <pre id="post"></pre ></div>
+    </div>
+    {%endblock%}
+    {% block scripts %}<script src="./static/blog.js"></script>{% endblock %}  

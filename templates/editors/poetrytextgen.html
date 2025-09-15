@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %}Poetry Text Copnverter{% endblock%}
+{% block content %}
+    
+<div class="container">
+    <div class="row">
+        <div class="col-sm pl-sm-0">
+            <h3 class="text-center heading">Poetry Text Converter</h3>
+        </div>
+    </div>
+    
+    <div class="row mt-3">
+        <div class="col-sm border">
+            <form class="form" id="form1" name="form1" >
+                <div class="form-group row mb-1">
+                    <label for="fileloader" class="col-sm-5 col-form-label">Poem Word File:</label>
+                    <div class="col-sm-6">
+                        <input class="form-control" type="file" id="fileloader" name="fileloader" accept=".doc, .docx">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4 offset-4  text-center mt-2 mb-2" >
+            <select class="form-select" id="outputtype" name="outputtype">
+                <option value="">Choose Output Type</option>
+                <option value="html">NativeWeb Code (HTML)</option>
+                <option value="text">Centered Text File</option>
+            </select>
+        </div>
+    </div> 
+
+    <div class="row mt-5  h-100" style="display: none;">
+        <div class="col-10 offset-1"  style="border: 1px solid  gray">
+            <div id="poem-body" class="post-container"></div>
+        </div>  
+    </div>
+</div>
+{%endblock%}
+ {% block scripts %}
+ <script src="./static/js/poetrygen.js"></script>
+ {% endblock %} 

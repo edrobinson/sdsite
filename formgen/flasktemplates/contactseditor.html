@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% block title %}Contacts Editor{% endblock%}
+{% block content %}
+    
+<div class="container">
+    <div class="row">
+        <div class="col-sm pl-sm-0">
+            <h3 class="text-center heading">Contacts Editor</h3>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-sm">
+            <form class="form" id="form1" name="form1" >    <div class="form-group row mb-1">
+        <label for="name" class="col-sm-5 col-form-label">Name:</label>
+        <div class="col-sm-6">
+             <input type="text" class="form-control" id="name" name="name"/>
+        </div>
+    </div>
+    <div class="form-group row mb-1">
+        <label for="email" class="col-sm-5 col-form-label">Email:</label>
+        <div class="col-sm-6">
+             <input type="text" class="form-control" id="email" name="email"/>
+        </div>
+    </div>
+    <div class="form-group row mb-1">
+        <label for="website" class="col-sm-5 col-form-label">Website:</label>
+        <div class="col-sm-6">
+             <input type="text" class="form-control" id="website" name="website"/>
+        </div>
+    </div>
+    <div class="form-group row mb-1">
+        <label for="subject" class="col-sm-5 col-form-label">Subject:</label>
+        <div class="col-sm-6">
+             <input type="text" class="form-control" id="subject" name="subject"/>
+        </div>
+    </div>
+    <div class="form-group row mb-1">
+        <label for="message" class="col-sm-5 col-form-label">Message:</label>
+        <div class="col-sm-6">
+             <input type="text" class="form-control" id="message" name="message"/>
+        </div>
+    </div>
+    <div class="form-group row mb-1">
+        <label for="received" class="col-sm-5 col-form-label">Received:</label>
+        <div class="col-sm-6">
+             <input type="text" class="form-control" id="received" name="received"/>
+        </div>
+    </div>
+    <div class="form-group row mb-1">
+        <label for="status" class="col-sm-5 col-form-label">Status:</label>
+        <div class="col-sm-6">
+             <input type="text" class="form-control" id="status" name="status"/>
+        </div>
+    </div>
+
+        <div class="row">
+            <div class="col-sm  text-center" >
+                    {% include "editorbuttons.html" %}
+            </div>
+        </div> 
+            
+         </div>
+    </div>
+            
+    
+</div>
+{%endblock%}
+ {% block scripts %}<script src="./static/contacts.js"></script>{% endblock %} 

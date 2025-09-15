@@ -1,0 +1,15 @@
+    {% extends "base.html" %}
+    {% block title %}Contact{% endblock%}
+    {% block content %}
+    <div class="container mt-5  ">
+        <div class="row" >
+            <div class="col-sm-4 h-100">
+                <img src="./static/img/CrowImage-small.jpg" alt="The crow image">
+            </div>
+            <div class="col-sm-8" style=" margin-top: 22%;">
+                <span class="contact-text">You can contact me at:  </span> 
+                <span style="font-size: 1.5rem; color: violet; font-weight: 700;">{{contactEmail}}</span>    
+            </div>
+        </div>
+    </div>
+    {%endblock%}

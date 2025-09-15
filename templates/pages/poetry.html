@@ -1,0 +1,28 @@
+    {% extends "base.html" %}
+    {% block title %}books{% endblock%}
+    {% block content %}
+    <div class="container mt-5">
+        <div class="row mt-5 mb-3">
+            <div class="col text-center" >
+               <h3>My Poetrys</h3>
+            </div>
+        </div>
+        {% for poem in poems %}
+           
+
+            <div class="row mt-1    ">
+                <div class="col text-center">
+                    <span>{{ poem.title | safe }}</span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6 offset-3">
+                    {{ poem.poem | safe}}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    
+    {%endblock%}
+ 

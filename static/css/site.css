@@ -1,0 +1,421 @@
+/* Monospace Font */
+@font-face {
+    font-family: "Arial"; 
+    src: url("arial.ttf") format("truetype"); 
+}
+
+/* Serif Font */
+@font-face {
+    font-family: "Tahoma";
+    src: url("tahoma.ttf") format("truetype"); 
+}
+
+body{
+  margin-top: 0;
+  padding-top: 0;  
+  background-color: #f0f0f0;
+  font-family: Arial;
+  font-weight : 500;
+  font-size: 12pt;
+}
+
+
+
+.center-image {
+  display: block;
+ 
+  margin: 0 auto; /* Center the image horizontally */
+}
+
+.centered-img {
+  display: block;
+  justify-content: center; 
+  align-items: center; 
+}
+
+.green-border{
+     border-right: 2px solid green;
+}
+
+.responsive-imag    e {
+  max-width: 100%; /* Ensures the image never exceeds its container's width */
+  height: auto;    /* Maintains the image's aspect ratio */
+}
+
+.image{
+   float:left; 
+  padding: .4rem;
+  
+  
+}
+
+.altcover{
+    display: none;
+    position: absolute;
+    left: 30%;
+    top: 20%;
+    width: 15%;
+    height: 50%;
+    z-index: 10000;
+}
+
+
+
+.fixed-ul {
+    list-style: none;
+    color: #ff6d0d;
+    font-family: serif, serif;    
+}
+
+.fixed-ul li:hover{
+    color: #0da2ff;
+}
+
+.hilight-txt{
+    color: #ff6d0d;
+}
+
+.contact-text{
+    font-family: "Times New Roman", Times, serif;
+    color: #F5A327; 
+    font-size: 1.5rem;
+}
+
+.about-text{
+    height: 650px;
+    margin-top: 14%;
+    padding: 32px;"    
+}
+
+.about-image{
+   margin-top: 25%;
+   width: 60%;
+   height: 60% 
+}
+
+.lpsheader{
+    text-align: center;
+    margin-left: 5%;
+    font-size: 1.8rem;
+    font-family: "Noto Serif", serif, serif;
+     color: #ff6d0d;
+     margin-bottom: 1.5%;
+}
+
+.lps-history-item-title{
+    font-size: 0.8rem;
+    font-family: "Noto Serif", serif, serif;
+     color: #ff6d0d;    
+}
+
+.lps-history{
+     height: 650px; 
+     margin-left: .5rem;
+}
+
+.lps-pubs{
+    height: 650px; 
+}
+
+
+/* The scrollable div enables almost endless scrolling in a fixed height div tag.
+    You must set a fixed height onthe div.
+*/    
+.scrollable-div {
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+.scrollable-div::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for WebKit browsers */
+}
+.scrollable-div {
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+.scrollable-div {
+    -ms-overflow-style: none; /* Hide scrollbar for IE/Edge */
+}        
+
+
+/* FAQ styles */
+.q-hdr {
+    color: #CC0000;
+    font-family: Veranda, Verdana, Arial, sans-serif;
+    font-size: 1.2rem;
+}
+.q-txt {
+    color: #F60000;
+}
+.a-hdr {
+    color: #CC0000;
+    font-family: Veranda, Verdana, Arial, sans-serif;
+    font-size: 1.3rem;
+}
+
+.a-txt {
+    color: #F60000;
+}
+
+
+pre {font-family: Arial, Lucida, monospace}
+
+.poem-pre{
+    font-family:  Tahoma, Lucida, monospace;
+    font-size: 12pt;
+    line-height: 1.2;
+}
+
+.bracketed-text{
+    margin-top: 1.3rem;
+    color: #ff6d0d;
+    font-style: italic; 
+    font-family: arial, serif;
+    text-align: center;
+}
+
+.poem-header{
+    color: black;
+    width: 100%;
+    font-size: 1rem;
+    text-align: center;
+}
+
+
+
+big-book-img{
+    width: 100%; 
+    height: 100%; 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.photo{
+     margin: .45vw;
+}
+
+
+
+.heading{
+    font-family: courier-regular, serif; 
+    font-weight: bold;
+}
+
+
+.navbar-brand{
+    height: 60px;
+}
+
+.big-brand{
+    font-size: 36px;
+    /*font-family: "VintageSignature",cursive;*/
+    padding: 0;
+    height: 50px;
+    margin: 0;
+}
+a  .nav-link .active {
+            color: blue !important;
+        }  
+  
+
+
+.navbar-nav .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; /* Prevents visual shift */
+  }
+
+
+.nav-link{
+    font-weight: 700;
+    margin-right: 40px;
+}
+
+.nav-link .active{
+    color: white !important;
+    background-color: #53EAFD !important;
+}
+
+
+.currentpg{
+    color: blue;
+    text-decoration: underline;
+ }
+
+.small-brand{
+   /* font-family: "VintageSignature", cursive;*/
+    font-size: 24px;
+    margin-left: 5rem;
+}
+
+.myh2{
+    font-size: 72px;
+    font-family: "VintageSignature", cursive;
+
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+
+.col-form-label{
+    text-align: right;
+    width: 350px;
+    padding-right: 5px; 
+}
+/*
+.card{
+    background: #f5f5dc;
+}
+*/
+.sidenav div {
+     font-size: 25px;
+     height: 25px;
+     margin-bottom: 10px;
+     }
+
+/* Makes the post text scrollable*/
+ .post-container {
+            padding: 10px;
+            width: 100%; 
+            height: 99%; 
+            overflow-x: hidden;
+            overflow-y: auto;
+            margin-left: 2%;
+            margin-top: 1%; 
+            border-radius: 5px;
+            font-family: "Garamond"; 
+}
+        
+.post-container::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+
+
+ .book-info-container {
+            padding: 10px;
+            width: 90%; 
+            height: 725px;
+            overflow-x: hidden;
+            overflow-y: auto;
+            margin-left: 3%;
+            margin-top: 1%; 
+            border-radius: 5px;
+            box-shadow: 10px 10px 15px  ;
+}
+        
+
+/* Makes the post text scrollable*/
+ .xbook-info-container {
+            padding: 10px;
+            overflow-x: hidden;
+            overflow-y: auto;
+            font-family: Arial;
+            font-size: 11px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            line-height: 1;
+            width: 100%;
+            height: 700px;
+}
+        
+.book-info-container::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+
+.book-info-container::-webkit-scrollbar { /* WebKit */)}{
+    width: 0;
+    height: 0;
+}        
+
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
+.spinner{
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    top: 50%;
+    left: 50%;
+    margin-left: -50px;
+    margin-top: -50px;
+    background: url('../assets/img/spinner.gif');
+    background-size: 100%;
+}
+
+
+.centered-txt {
+  display: d-flex;
+  justify-content: center; 
+  align-items: center; 
+}
+
+.fixed-ul,
+.poem-left,
+.footer,
+.hide-small,
+.about-right    {
+    display:block !important;    
+}
+
+@media all and (max-width: 499px) {
+    .fixed-ul,
+    .poem-left,
+    .footer,
+    .hide-small,
+    .about-right    {
+        display:none !important;  
+    }
+
+    .green-border{
+         border-right: none;
+    }
+    
+    .contact-text{
+        color: #F5A327; 
+        font-size: 1rem;
+    }
+    
+    .lps-history{
+     height: 650px;
+    margin-left: 0%;    
+    }
+
+    .img {
+        width: 80%;
+    }    
+    .altcover{
+        left: 20%;
+        width: 100%;
+        height:100%;
+    }
+    
+    .lps-pubs{
+        height: 525px; 
+    }
+    
+    .lps-reading-img{
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+    
+    .about-text{
+        height: 350px;
+        margin-top: 0;
+    }
+    .about-image{
+       margin-top: 0.5%; 
+       width: 50%;
+       height: 70% 
+    } 
+        
+        
+    
+}

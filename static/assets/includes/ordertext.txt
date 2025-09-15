@@ -1,0 +1,2 @@
+Please fill out this order form.<br>
+Copies will be sent in the mail, along with an invoice charging ${$price} per copy plus sales tax, shipping and handling.

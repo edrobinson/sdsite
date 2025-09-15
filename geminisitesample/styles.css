@@ -1,0 +1,158 @@
+/* --- Global Styles & Base Typography --- */
+body {
+    /* Use Open Sans as the closest free mimic for the custom Typekit font */
+    font-family: 'Open Sans', Arial, sans-serif; 
+    margin: 0;
+    /* Add padding to the top of the body to account for the fixed header height */
+    padding-top: 100px; 
+    background-color: #ffffff;
+    color: #000000;
+    line-height: 1.5;
+    font-weight: 400; 
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+/* --- Fixed Header (Mimicking Foundation Sticky) --- */
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+    padding: 10px 0;
+}
+
+.header-container {
+    /* Ensure no padding on the sides for full-bleed look, but content is centered */
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Navigation Links (Crisp and uppercase) */
+.top-nav a {
+    font-size: 0.8em; 
+    font-weight: 700; /* Bold weight for menu items */
+    text-transform: uppercase;
+    letter-spacing: 2px; /* Key style for the Allende look */
+    padding: 0 15px; 
+}
+
+.logo .flower {
+    /* The flower is the logo placeholder in the center */
+    display: block;
+    height: 75px; 
+    width: auto;
+}
+
+.header-tools {
+    font-size: 0.8em;
+    font-weight: 400;
+    margin-top: 5px;
+}
+
+.lang-switch {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* --- Main Content 50/50 Split --- */
+
+/* Ensures the row spans the full viewport width */
+.main-content-row {
+    width: 100vw;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* Left Column (Content and Book Covers) */
+.left-column {
+    /* Match the photo column height visually */
+    display: flex;
+    justify-content: center; /* Center vertically */
+    align-items: center;
+    min-height: 540px; /* Matching the height of the right photo (540px) */
+    background-color: #f8f8f8; /* A subtle background is often used on the content side */
+}
+
+.home-img-links {
+    max-width: 80%;
+    height: auto;
+}
+
+.home-links {
+    margin-top: 20px;
+    padding: 0 10%;
+}
+
+.home-books-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.home-books-table td {
+    padding: 10px;
+    text-align: center;
+}
+
+.book-cover {
+    width: 100px; /* Small size for the covers in the table */
+    height: auto;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Right Column (Author Photo) */
+.right-column {
+    padding: 0; /* Important: removes Bootstrap gutter padding */
+}
+
+.home-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fills the container without distortion */
+    max-height: 540px; /* Matching the height of the source image */
+}
+
+
+/* --- Footer --- */
+.page-footer {
+    font-size: 0.75em;
+    color: #777;
+    font-weight: 400;
+    text-transform: uppercase;
+    border-top: 1px solid #eee !important;
+}
+
+/* --- Mobile Adjustments (Bootstrap handles most of this) --- */
+@media (max-width: 992px) {
+    /* On smaller screens, stack the columns */
+    .left-column, .right-column {
+        min-height: auto;
+        padding-top: 30px !important;
+        padding-bottom: 30px !important;
+    }
+    
+    .right-column {
+        /* Ensure photo is centered when stacked */
+        text-align: center;
+    }
+    
+    .home-photo {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+}

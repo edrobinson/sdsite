@@ -1,0 +1,42 @@
+    {% extends "base.html" %}
+    {% block title %}Site Admin{% endblock%}
+    {% block content %}
+    <div class="container mt-5">
+        <div class="row mt-5 mb-3">
+            <div class="col text-center" >
+               <h3>Site Administration</h3>
+            </div>
+        </div>
+        
+        <div class="row mt-5 mb-3">
+            <div class="col text-center" >
+                <a type="button"   class="btn btn-primary mb-2" href="/help/intro">Help</a>
+            </div>
+        </div>
+        
+        <div class="row content-center mt-3 pt-5">
+            <a type="button"   class="btn btn-primary mb-2" href="/booksmgr">Books</a>
+            <a type="button"   class="btn btn-primary mb-2" href="/faqmgr">FAQs</a>
+            <a type="button"   class="btn btn-primary mb-2" href="/prosemgr">Prose</a>
+            <a type="button"   class="btn btn-primary mb-2" href="/poetrymgr">Poetry</a>
+            <a type="button"   class="btn btn-primary mb-2" href="/contactmgr">Contacts</a>
+            <a type="button"   class="btn btn-primary mb-2" href="/blogmgr">Blog</a>
+        
+        </div>
+        
+        <div class="row  mt-2 mx-auto">
+            <div class="col-8 offset-3">
+            <p>
+                Click a big blue button to edit the named data table.<br/>
+                The editors are used to maintain the database. <br/>
+                You can create, read, update and delete records from the data tables. 
+            </p>
+            </div>
+        </div>
+        
+         
+        
+    </div>
+    {%endblock%}
+    {% block scripts %}<script src="./static/admin.js"></script>{% endblock %}  
+ 

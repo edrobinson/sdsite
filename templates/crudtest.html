@@ -1,0 +1,26 @@
+    {% extends "base.html" %}
+     {% block title %}Crud Test{% endblock%}
+    {%block header%}Crud Testing{% endblock%}
+    {% block content %}
+    <div class="container mt-5 text-align-center align-items-center">
+        <div class="row mt-5">
+            <div class="col">
+               <div class="form ">
+                    {% include 'crudform.html' %}
+                        <div class="form-group offset-3 col-md-6">
+                        <input type="text" class="form-control" name="msg" id="msg" placeholder="Message">
+                        </div> 
+                    </form>
+             </div>
+            </div>    
+        </div>        
+                
+        <div class="row">
+            <div class="col-8 offset-3" style="margin-top: 3%;" id="result" ></div>
+        </div>
+        <button type="button" onclick="crudtest(event)">Go</button>
+    </div>
+   
+
+    {%endblock%}
+ 

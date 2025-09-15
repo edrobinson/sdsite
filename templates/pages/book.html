@@ -1,0 +1,76 @@
+    {% extends "base.html" %}
+    {% block title %}{{book['title']}}{% endblock%}
+    {% block pageid %}{% endblock%}
+    {% block content %}
+    <style>
+        .book-img{
+            border: 1px solid #EEF2FF; 
+            padding: 5px;
+            display: block;
+            margin: auto;   
+            
+        }
+        
+        .book-title{
+            margin-left: 12%;
+        }
+        
+        .book-info{
+           height: 90%;
+           width: 60%;
+           margin-top: 3%
+           padding-left: 2%;
+        }
+        
+        .highlight{
+            color: #ff6d0d;
+            font-style: italic; 
+            font-family: arial, serif;
+        }
+        
+        @media screen and (max-width: 499px) {
+                .book-info{
+                   height: 100%;
+                   width: 100%;
+                }   
+        }       
+    
+    </style>
+    <div class="row h-100"> <!-- Begin -->
+            <!-- Values for book processing -->
+            <input type="hidden" id="bookid" value="{{book['id']}}">
+            <input type="hidden" id="booktitle" value="{{book['title']}}">
+            
+            <!-- Left side - book title, cover and link to order page -->
+            <div class="col-sm-4 green-border" >
+                <div class="row mt-1">
+                    <div class="col-sm-12 book-title"> 
+                        <h5 class="highlight" id="title" >{{book['title']}}</h5>
+                    </div>
+                </div>
+                
+                <div class="row mt-1">                
+                    <div class="col-sm-12 content-center" style="margin-top: 15%;">
+                        <img class="book-img"  src="./static/assets/img/{{book['imagename']}}"  alt="Book Image"/>
+                    </div>
+                </div>
+                <div class="row  text-center content-center">
+                    <div class="col-sm-12 text-center">
+                        <a href="/orderbook/{{book['id']}}">purchase</a>
+                    </div>      
+                </div>
+            </div> 
+            <!-- Right  side - summary and extract -->
+            <div class="col-sm-8 scrollable-div book-info border">
+                <h4  class="ms-3 mt-5" style="color: #F5B027; font-style: italic;">summary</h4>
+                {{book['summary'] | safe}}    
+            
+                <h4 class="mt-1 mb-3 ms-3" style="color: #F5B027; font-style: italic;">excerpt</h4>
+                {{book['extract'] | safe}} 
+            </div>
+    </div> <!-- End -->
+    {%endblock%}
+    {% block scripts %}
+    <script src="./static/crud.js"></script>
+    <script type="module" src="./static/books.js"></script>
+     {% endblock %}  

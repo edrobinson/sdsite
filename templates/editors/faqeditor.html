@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block title %}FAQ Editor{% endblock%}
+{% block content %}
+    
+<div class="container">
+    <div class="row mt-2 mb-5">
+        <div class="col-sm pl-sm-0">
+            <h3 class="text-center heading">FAQ Editor</h3>
+        </div>
+    </div>
+    <div class="form-group row mb-1">
+        <label  class="col-sm-5 col-form-label">Available FAQs:</label>
+        <div class="col-sm-6">
+         <select class="form-select" id="faqselect">
+            <option value=' '>Select an FAQ to Edit</option>
+            {%for faq in faqlist %}
+            <option value="{{faq['id']}}">{{faq['question']}}</option>
+            {%endfor%}
+        </select>
+        </div>
+    </div>
+ 
+    <div class="row mt-3">
+    <div class="col-sm">
+    <form class="form" id="form1" name="form1" >
+        <div class="form-group row mb-1">
+            <label for="question" class="col-sm-5 col-form-label">Question:</label>
+            <div class="col-sm-6">
+                 <textarea class="form-control" id="question" name="question" rows="3"></textarea>
+            </div>
+        </div>
+        <div class="form-group row mb-1">
+            <label for="answer" class="col-sm-5 col-form-label">Answer:</label>
+            <div class="col-sm-6">
+                <textarea class="form-control" id="answer" name="answer" rows="6"></textarea>
+            </div>
+    </form>
+    {% include "editorbuttons2.html" %}
+    
+  </div>
+{%endblock%}
+{% block scripts %}
+<script src="./static/crud.js"></script>
+<script type="module" src="./static/faqmgr.js"></script>
+{% endblock %} 

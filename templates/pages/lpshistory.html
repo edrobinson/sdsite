@@ -1,0 +1,52 @@
+    {% extends "base.html" %}
+    {% block title %}History{% endblock%}
+    {% block content %}
+    <div class="container mt-1  ">
+        <div class="row">
+            <div class="col-sm-12 lpsheader mb-2">
+                The history of The Live Poets Society
+            </div>
+        </div>
+        <div class="row" >
+            <div class="col-sm-3 hide-small">
+                <ul class="fixed-ul mt-2">
+                    <li onclick="showId('page1')">LPS at 25 Years (2021 ) and Beyond</li>
+                    <li onclick="showId('page2')">Live Poets Workshop Process</li>
+                </ul>
+            </div>
+            <div class="col-sm-9"    style="height: 600px"> <!-- This contains all of the content -->
+                <div class="lps-history  scrollable-div" style="height: 595px;">
+                    <div id="page1" class="mt-1 mb-1 lps-history-item-title">Live Poets Society at 25 Years (2021) and Beyond</div>
+                    <p> 
+                    In October 1996, the Live Poets Society came into being in Boise, Idaho, at The Cabin.  The Cabin (then called The Log Cabin Literary Center) held a meeting for all members who wanted to form writers’ groups.  The purpose of the groups was to give feedback on works-in-progress, which our group has done twice a month for over 25 years!  Since 2024 members have taken a break from regularly scheduled meetings to work on collaborative projects by the Live Poets under a more flexible schedule. </p> 
+                    <p>
+                    The Live Poets got a great boost in 1998 from a weekend-long workshop given at The Cabin by poet Bill Studebaker, who suggested that we publish an anthology of our poems.  Within a year What Mattered Once, What Matters Now was published.  Bill wrote the introduction.  Poet Gino Sky, who’d joined the Live Poets for public poetry readings at Barnes and Noble, contributed poems.</p>
+                    <p>
+                    In April 2009, the Garden City Public Library invited the Live Poets to do a reading for National Poetry Month.  So began an 11-year annual tradition—which took a pandemic to interrupt.
+                    As people arrived for an evening of poetry, a trio of musicians played classical music.  Then came the reading.  An integral part was the inclusion of poets from outside the Live Poets Society.  From 2009 to 2023, most of our new members had first contact with the Live Poets by reading at the Garden City Public Library.</p>
+                    <p>
+                    In 2016 the Live Poets Society collaborated with Off Center Dance, a local dance troupe.  In response to an exhibit at the Boise Art Museum, Folding Paper: The Infinite Possibilities of Origami, director Kelli Brown choreographed dances for the troupe, and the Live Poets wrote poems.  Poets and dancers gave live public performances at the Art Museum and at Boise Contemporary Theater.  The Live Poets produced and edited a booklet to commemorate these events: Folding/Unfolding.</p>
+                    <p>
+                    In April 2022, Rediscovered Books in Boise sponsored a “Virtual Evening with The Live Poets,” which celebrated our 25 years together as well as National Poetry Month.  More than 80 people joined us, some from as far away as the United Kingdom and South Korea.</p>
+                    <p>
+                    The Live Poets Society is a consensus-driven group without by-laws, rules or elected officers.  We have been without map or compass, yet we’ve had purposeful direction for more than 25 years.  Three women emerged to lead us: Delores Gore, Vera Noyce and Sharla Dawn Robinson Ng.  For more than two decades, they have guided our meetings and initiated our projects in the community.</p>
+                    <p> 
+                    The trustful and responsible talk about our poems and reaching decisions by consensus have built a strong, cohesive organization.  The Live Poets Society could serve as a model for communication that proceeds naturally from mutual respect in a spirit of collaboration.</p>
+                    <p>
+                    For more than 25 years, members of the Live Poets Society have grown together as an energetic group because the poets mutually support each other’s voices and poetry.  By giving public readings, the Live Poets also hope to encourage an appreciation of poetry by engaging people in the community with original poetry.</p>
+                    <hr>
+                
+                    <div id="page2" class="mt-1 mb-1 lps-history-item-title">Live Poets Workshop Process</div>
+                    <p>
+                    From October 1996 to May 2024, the Live Poets Society met twice monthly at The Cabin in Boise, except for meeting via Zoom during the pandemic.  Since May of 2024, meeting schedules have adjusted to accommodate focused writing projects and outreach to the poetry community on the east and west coasts.</p>
+                    <p>  
+                    In a typical meeting, each poet hands out a poem-in-progress.  While the poet reads the poem aloud, the other poets may make a few notes on their copies (which are returned later to the poet for further use).  After reading, the poet remains silent while the others give constructive spoken feedback.  Then the poet who wrote the poem may ask questions to hear additional remarks on how the poem comes across.  The intent is to praise what works well in a poem and to offer suggestions for improving the poem’s effectiveness.</p>
+                    <p>
+                    During these meetings when we poets give each other feedback on poems-in-progress, we develop trust while we listen to comments about our poems.  We also develop responsibility and respectfulness as we find ways to give honest and constructive suggestions that support the poet who just shared a poem.  As a result of this collaborative process, abiding friendships have developed over the years among the Live Poets.</p>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+    {%endblock%}
+    {% block scripts %}<script src="./static/js/lps.js"></script>{% endblock %}  

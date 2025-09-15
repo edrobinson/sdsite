@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My CRUD Page</title>
+</head>
+<body>
+    <h1>Manage Records</h1>
+
+    <h2>Create New Record</h2>
+    <form id="recordForm">
+        <label for="recordName">Name:</label>
+        <input type="text" id="recordName" required><br><br>
+        <label for="recordValue">Value:</label>
+        <input type="text" id="recordValue" required><br><br>
+        <button type="submit">Create Record</button>
+    </form>
+
+    <h2>Existing Records</h2>
+    <button id="loadRecordsBtn">Refresh Records</button>
+    <ul id="recordList">
+        </ul>
+
+    <script type="module" src="file1-crud-manager.js"></script> 
+    <script type="module" src="file2-pacecript.js"></script> 
+</body>
+</html>

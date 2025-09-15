@@ -1,0 +1,33 @@
+    {% extends "base.html" %}
+    {% block title %}FAQs{% endblock%}
+    {% block content %}
+    <div class="container h-100 mt-2">
+        <div class="row h-100" >
+           <div class="col-5 h-100">
+                      <div class="text-center"><h5 class="bracketed-text" id="title" >FAQs</h5></div>
+                <br>    
+                <img  class="mx-auto  centered-img"  
+                 src="./static/assets/img/hashimoto-2.jpg" 
+                 alt="Sharla Dawn" width=440 height=540
+                 style="border: 1px solid #EEF2FF; padding: 5px; display:block;"/> 
+                      
+            </div>
+            <div class="col-7"   style="height: 98%; border-left: 2px solid green;">
+               <div class="post-container mt-2" style="margin-left: 2%;">
+                    {% for faq in faqlist %}
+                    <div class="row">
+                        <p class="mb-1">
+                        <span class="q-hdr"><strong>Q.</strong></span> 
+                        <span class="q-txt">{{faq['question']}}</span>
+                        </p>
+                        <p>
+                        <span class="a-hdr"><strong>A.</strong></span> 
+                        <span class="a-txt">{{faq['answer']}}</span>
+                        </p>        
+                    </div>
+                    {% endfor %}
+                </div>
+        </div>
+    </div>
+    {%endblock%}
+ 

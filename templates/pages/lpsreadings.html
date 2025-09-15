@@ -1,0 +1,28 @@
+    {% extends "base.html" %}
+    {% block title %}Readings{% endblock%}
+    {% block content %}
+    <div class="container mt-1  ">
+        <div class="row" >
+             <div class="col lpsheader mb-2">
+                The Live Poets Society Readings
+            </div>
+       </div>
+        <div class="row" >
+        <ul class="fixed-ul hide-small" style="width: 15%">
+            <li onclick="showId('corona')">James Armstrong - Corona</li></li>
+            <li onclick="showId('marbles')">Loa Campbell - Marbles</li>
+        </ul>
+            <div class="col-6 offset-2   scrollable-div" style="height: 650px;"> <!-- This contains all of the content -->
+                <div> <!-- Begin Reading Item -->
+                    <div id="corona" class="mt-1 mb-1 lps-history-item-title">James Armstrong - Corona</div>
+                    <img class="lps-reading-img" src="./static/img/corona.jpg"> 
+                    <hr>
+                </div> <!-- End of reading item -->
+                <div> <!-- Begin Reading Item -->
+                    <div id="marbles" class="mt-1 mb-1 lps-history-item-title">Loa Campbell - Marbles</div>
+                    <img class="lps-reading-img" src="./static/img/marbles.jpg"> 
+                    <hr>
+                </div> <!-- End of reading item -->
+        </div>
+    </div>
+    {%endblock%}

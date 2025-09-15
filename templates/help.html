@@ -1,0 +1,18 @@
+    {% extends "base.html" %}
+    {% block title %}{{pagename}} Help{% endblock%}
+    {% block content %}
+    <div class="container mt-5 ml-3">
+        <div class="row mt-5 mb-3">
+            <div class="col text-center pl-3" >
+               <h3>{{pagename}} Help</h3>
+            </div>
+        </div>
+        <div class="row mt-5 mb-3>
+            <div class="col text-center " >
+                {{md|safe}}
+            </div>
+        </div>
+    </div>
+    
+    {%endblock%}
+ 

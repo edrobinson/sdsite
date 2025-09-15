@@ -1,0 +1,207 @@
+/* --- Global Styles & Fonts --- */
+body {
+    font-family: 'Roboto', Arial, sans-serif; /* Modern Sans-Serif Look */
+    margin: 0;
+    padding-top: 100px; /* Space for the fixed header */
+    background-color: #ffffff;
+    color: #000000;
+    line-height: 1.5;
+    font-weight: 300; /* Light text weight */
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+/* --- Fixed Header & Navigation --- */
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+    padding: 10px 0; /* Padding around the header content */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05); /* Very subtle shadow */
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; /* Stack nav and tools vertically */
+    align-items: center;
+}
+
+/* Top Navigation (Centered) */
+.top-nav {
+    display: flex;
+    align-items: center;
+    font-size: 0.85em;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px; /* Space between nav and tools */
+}
+
+.top-nav a {
+    padding: 0 15px; /* Spacing between links */
+}
+
+.logo a {
+    font-size: 1.6em; /* Large, bold logo in the center */
+    font-weight: 700;
+    padding: 0 40px; /* Extra space around the logo */
+}
+
+/* Header Tools (Social & Language) */
+.header-tools {
+    font-size: 0.8em;
+    font-weight: 400;
+    margin-top: 5px;
+}
+
+.social-icon {
+    font-family: Arial, sans-serif; /* Use a common font for icon placeholders */
+    margin-right: 10px;
+}
+
+.language-select a {
+    margin: 0 2px;
+}
+
+
+/* --- Main Content Layout --- */
+.content-wrapper {
+    max-width: 900px; /* Keep content narrow for readability */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Section Styling */
+.content-block {
+    padding: 60px 0; /* Generous vertical spacing */
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.2em;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+.section-divider {
+    border: none;
+    height: 1px;
+    background-color: #e0e0e0;
+    margin: 40px 0;
+}
+
+/* Hero Placeholder */
+.hero-image-placeholder {
+    height: 40vh; /* Visual space to see the fixed header working */
+    /* REMOVE this background in production and replace with your hero image/video code */
+    background-color: #f7f7f7; 
+    margin-bottom: 40px;
+}
+
+/* Latest Book Block */
+.book-cover-large {
+    width: 250px;
+    height: auto;
+    display: block;
+    margin: 0 auto 30px auto; /* Centered with vertical space */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.book-title-home {
+    font-size: 1.5em;
+    font-weight: 500;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.book-summary {
+    max-width: 600px; /* Narrower text block */
+    margin: 0 auto 30px auto;
+    font-size: 1.1em;
+}
+
+/* Buttons */
+.btn-primary, .btn-full-bio {
+    display: inline-block;
+    padding: 10px 30px;
+    border: 1px solid #000;
+    color: #000;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-primary:hover, .btn-full-bio:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px 0;
+    border-top: 1px solid #eeeeee;
+    margin-top: 60px;
+    font-size: 0.75em;
+    color: #777;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+footer a {
+    color: #777;
+    margin-left: 5px;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+    body {
+        padding-top: 130px; /* More space for stacked header */
+    }
+
+    .top-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .top-nav a {
+        padding: 5px 10px;
+    }
+
+    .logo a {
+        padding: 5px 20px;
+        order: -1; /* Move logo to the top visually on mobile */
+        width: 100%;
+        text-align: center;
+    }
+
+    .header-tools {
+        margin-top: 5px;
+    }
+
+    .content-block {
+        padding: 30px 0;
+    }
+
+    .section-title {
+        font-size: 1.8em;
+    }
+}

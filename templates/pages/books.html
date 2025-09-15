@@ -1,0 +1,42 @@
+    {% extends "base.html" %}
+    {% block title %}books{% endblock%}
+    {% block content %}
+    <style>
+        rndimg{
+            border-radius: 10px;
+        }
+    </style>
+    <div class="container mt-5">
+           {% for book in books %}
+ 
+           <!-- Values for book processing -->
+           <input type="hidden" id="poemid" value="{{book['id']}}">
+            <input type="hidden" id= "poemtitle" value="{{book['title']}}">
+     
+        <div class="row mt-5 mb-3">
+            <div class="col text-center" >
+               <h3>My Books</h3>
+            </div>
+        </div>
+           
+
+            <div class="row mt-1    ">
+                <div class="col text-center">
+                    <h3>{{ book.title | safe }}</h3>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-5 mt-1 me-1">
+                    <img src="./static/assets/img/{{ book['imagename'] }}" alt="{{ book.title|safe}}" "width=500" style="border-radius:10px;">
+                    <a type="button"   class="btn btn-primary mt-2 mb-2" href="/orderbook/{{ book.id}}">Order Me</a> 
+                </div>
+                <div class="col-6">
+                    {{ book.description | safe}}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    
+    {%endblock%}
+ 

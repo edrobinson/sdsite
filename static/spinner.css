@@ -1,0 +1,53 @@
+/* Spinner Overlay Styles */
+.loading-overlay {
+    position: fixed; /* Fixed position to cover the whole viewport */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Viewport width */
+    height: 100vh; /* Viewport height */
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    display: flex; /* Use Flexbox for centering */
+    flex-direction: column; /* Stack spinner and text vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center;     /* Center content horizontally */
+    z-index: 1000; /* Ensure it's on top of other content */
+    transition: opacity 0.3s ease; /* Smooth fade in/out */
+    -webkit-backdrop-filter: blur(5px); /* For blurring background behind overlay (Safari/Chrome) */
+    backdrop-filter: blur(5px); /* Standard blur */
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3; /* Light grey */
+    border-top: 5px solid #3498db; /* Blue */
+    border-radius: 50%; /* Makes it round */
+    animation: spin 1s linear infinite; /* Spin animation */
+    margin-bottom: 15px; /* Space between spinner and text */
+}
+
+.loading-overlay p {
+    color: #333;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Animation for the spinner */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Utility class to hide elements */
+.hidden {
+    display: none !important; /* Ensures it's completely out of flow */
+    opacity: 0; /* For a potential fade out effect (though display:none overrides this immediately) */
+    pointer-events: none; /* Prevents interaction with hidden elements */
+}
+
+/* Utility class to show elements */
+.visible {
+    display: flex !important; /* Overrides display: none and ensures flex layout */
+    opacity: 1;
+    pointer-events: auto; /* Allows interaction if needed (though not for this overlay) */
+}

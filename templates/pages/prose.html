@@ -1,0 +1,31 @@
+    {% extends "base.html" %}
+     {% block title %}{% endblock%}
+    {%block header%}My Prose{% endblock%}
+    {% block content %}
+
+    <div class="row">
+   <div class="d-flex flex-column align-items-stretch flex-shrink-0" 
+            style="width: 400px; margin-top: 3%; border:1px solid black;margin-left: 1%">
+      <span class="fs-5 fw-semibold">Prose Articles</span>
+    </a>
+        {% for prose in proselist %}
+        <div class="list-group list-group-flush border-bottom scrollarea">
+          <a onclick = "loadaProse({{prose.id}}, event)" class="list-group-item list-group-item-action active py-3 lh-tight" aria-current="true">
+            <div class="d-flex w-100 align-items-center justify-content-between">
+              <strong class="mb-1">{{prose.title|safe}}</strong>
+            </div>
+            <div class="col-10 mb-1 small">{{prose.description|safe}}</div>
+          </a>   
+        </div>
+        {% endfor %}
+    </div>   
+    <!-- Content -->    
+    <div class="row">
+        <div class="col-5 post-container offset-3" style="margin-top: 3%;" id="article" ></div>
+    </div>
+
+    {%endblock%}
+    {% block scripts %}
+    <script src="./static/crud.js"></script>
+    <script src="./static/prose.js"></script>
+    {% endblock %}  

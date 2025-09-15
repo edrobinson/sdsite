@@ -1,0 +1,16 @@
+{#
+    This is part of the crud processing.
+    The hidden inputs are as follows:
+        1. Id is the id of the current record used for update and delete
+        2. Opcode is the action requested: insert, read, update, delete - subject to change
+        3. Fields is a list of fields for selects like 'id name description' or '*'
+        4. Query is a complete query for opcode= query
+        5. Validate indicates if validation is needed if not empty', do validation
+        6. Requireds is  a string of comma seperated field names
+        The remaining fields are self explanitory . . .
+#}
+        <form class="form" id="form1" name="form1" >
+            <input type="hidden" name="id"              id="id"> 
+            <input type="hidden" name="opcode"     id="opcode">
+            <input type="hidden" name="table"         id="table">
+            

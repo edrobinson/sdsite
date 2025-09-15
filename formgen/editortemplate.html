@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}[title]{% endblock%}
+{% block content %}
+    
+<div class="container">
+    <div class="row">
+        <div class="col-sm pl-sm-0">
+            <h3 class="text-center heading">[title]</h3>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-sm">
+            [form]
+        <div class="row">
+            <div class="col-sm  text-center" >
+                    {% include "editorbuttons.html" %}
+            </div>
+        </div> 
+            
+         </div>
+    </div>
+            
+    
+</div>
+{%endblock%}
+ {% block scripts %}<script src="./static/[js]"></script>{% endblock %} 

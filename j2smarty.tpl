@@ -1,0 +1,52 @@
+    { extends "base.html" }
+    { block title }{$book.title}{ endblock}
+    { block pageid }{ endblock}
+    { block content }
+    <div class="row h-100"  style="height: 750px"> <!-- Begin -->
+            <!-- Values for book processing -->
+            <input type="hidden" id="bookid" value="{$book.id}">
+            <input type="hidden" id="booktitle" value="{$book.title}">
+            
+            <div class="col-6 h-100" style="width: 40%; border-right: 2px solid green;"> <!-- Begin Left Side -->
+                <div class="row mt-1">
+                    <div class="col-12" style="margin-left: 15%;"> 
+                        <h5 class="highlight" id="title" >{$book.title}</h5>
+                    </div>
+                </div>
+                <div class="row">
+                </div>
+                <div class="row"style="margin-top: 60%; margin-left: 15%">
+                    <div class="col-6 pl-3">
+                    <ul class="list-unstyled">
+                    <li id="summaryli">summary</li>
+                    <li id="excerptli">excerpt</li>
+                    <li><a href="/orderbook/{$book.id}" style="text-decoration: none; color: rgb(33, 37, 41);">purchase</a></li>
+                    </ul>
+                    </div>
+                </div>
+            </div> <!-- End Left Side -->
+            
+            <!-- The right side handles book cover, summaries, extracts and poems -->
+            <div class="col-6" style="width: 60%; height: 100%;">
+                <!-- Large book cover for initial display -->
+                <div  id="big-book-img">
+                    <img src="./static/assets/img/{$book.imagename}"
+                        alt="Book Image" width="440" height="540"
+                        style="border: 1px solid #EEF2FF; padding: 5px;" />
+                </div>
+                
+                <div id="summary"   style="width: 90%; height: 100%; display: none; margin-left: 2%;">
+                    <h4 id="txttitle" class="ms-3" style="color: #F5B027; font-style: italic;">summary</h4>
+                    <div class="post-container">{$book.summary | safe}</div>    
+                </div>
+                
+                <div id="extract" style="width: 90%; height: 100%; display: none; margin-left: 2%;">
+                    <h4 class="mt-3 mb-3 ms-3" style="color: #F5B027; font-style: italic;">excerpt</h4>
+                    <div class="post-container">{$book.extract | safe}</div> 
+            </div> <!-- End of right side panel -->
+    </div> <!-- End -->
+    {endblock}
+    { block scripts }
+    <script src="./static/crud.js"></script>
+    <script type="module" src="./static/books.js"></script>
+     { endblock }  

@@ -1,0 +1,12 @@
+This is an index of the includes folder.
+
+booktpl.txt         Original Template used by Books.php to construct the list of books
+
+config.php          Site configuration file
+
+ordertext.txt       Text for the cart on the order page
+
+poemtpl.txt         Template for the books page book list.
+
+
+

@@ -1,0 +1,20 @@
+{
+    "name": "ed/assets",
+    "require": {
+        "jaxon-php/jaxon-core": "~2.2",
+        "smarty/smarty": "^4.3",
+        "simple-crud/simple-crud": "^7.5",
+        "tinymce/tinymce": "^6.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ed\\Assets\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ed Robinson",
+            "email": "edrobinson@gmail.com"
+        }
+    ]
+}

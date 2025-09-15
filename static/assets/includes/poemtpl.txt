@@ -1,0 +1,12 @@
+    <div class="" style="margin-top: 15px; ">
+        <div class=" author">
+            <p style="font-weight: 600;">Author: [author]</p>
+        </div>
+        <div class=" title" style="font-weight: 550;">
+            <p style="font-weight: 600;">[title]</p>
+        </div>
+        
+        <div class="poems">
+            <pre class="pre" >[poem]</pre>
+        </div>
+    </div>

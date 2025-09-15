@@ -1,0 +1,24 @@
+<br/>
+<div class="w3-col"style=" margin-top: 10px; margin-bottom: 25px; padding:5px;width: 75%; border-bottom: 1px solid black;">
+
+    <img src="[img]" 
+    height="450" 
+    style="float: left; 
+    margin-right: 50px;
+    display: inline-block;">
+
+    <div style="display: inline-block; float:left;">
+        <div class="title">
+            <p>Title: [title]</p>
+        </div>
+        <div class="author">
+            <p>Author: [author]</p>
+        </div>
+        <div class="text">
+            <p<Price: [price]</p>
+        </div>
+        <pre class="text">[description]</pre>
+        <button class="btn btn-primary>Order This Book</button>>
+    </div>
+</div>
+
